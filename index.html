@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <title>TARA VIRTUAL</title>
+</head>
+<body>
+    <main>
+        <h1 class="logo">TARA VIRTUAL</h1>
+        <div class="conteiner">
+            <div class="radio">
+                <span>Peso recipiente:</span>
+                <div class="radio-item">
+                    <input type="radio" id="radio-recip-id" name="radio-recip" onclick="veriRadio()">
+                    <label for="radio-recip-id"> AUTOMÁTICO</label>
+                </div>
+                <div class="radio-item">
+                    <input type="radio" id="radio-recip-id2" name="radio-recip" onclick="veriRadio()">
+                    <label for="radio-recip-id2"> PESO ZERADO</label>
+                </div>
+                <div class="radio-item">
+                    <input type="radio" id="radio-recip-id3" name="radio-recip" onclick="veriRadio()">
+                    <label for="radio-recip-id3"> PERSONALIZADO</label>
+                </div>
+                <div class="input-class radio-item">
+                    <label for="peso-recip-id">recipiente:</label>
+                    <input type="number" id="peso-recip-id" name="peso-recip">
+                </div>
+            </div>
+           
+            <div class="input-class">
+                <label for="peso-auto-id">Quatidade alternativa: </label>
+                <input type="number" id="peso-auto-id" name="peso-auto">
+            </div>
+            <div class="input-class">
+                <label for="peso-id">Peso:</label>
+                <input type="number" id="peso-id" name="peso">
+            </div>
+            
+            <div class="input-class">
+                <label for="peso-total-id">Peso total:</label>
+                <input type="number" id="peso-total-id" name="peso-total">
+            </div>
+            <div class="input-class checkbox">
+                <label for="sobrepeso-id">Sobrepeso</label>
+                <input type="checkbox" id="sobrepeso-id" name="sobrepeso" onclick="checarBox()">
+            </div>
+            <div class="checkbox-true" style="display:none">
+                <div class="peso-class input-class">
+                    <label for="peso2-id">Peso 2:</label>
+                    <input type="number" id="peso2-id" name="peso2">
+                </div>
+                <div class="input-class">
+                    <label for="peso3-id">Peso 3:</label>
+                    <input type="number" id="peso3-id" name="peso3">
+                </div>
+            </div>
+            <input type="button" value="enviar" class="button" onclick="resultado()">
+        
+            <div class="result">
+                <span>TOTAL COMPONENTE</span>
+                <span id="resultado">total</span>
+            </div>
+        </div>
+
+    <h2>Instruções de uso</h2>
+    <ul>
+        <li>No campo PESO RECIPIENTE, selecionar se o cálculo deve ser feito como AUTOMÁTICO(3g), PESO ZERADO(usado quando a balança permite desconsiderar o peso do recipiente ou o recipiente é inexistente) ou PERSONALIZADO (peso real do recipiente). Para PERSONALIZADO, pesar o recipiente sem componentes dentro e inserir no campo RECIPIENTE</li>
+        <li>
+            Pesar 5 componentes na balança e digitar o peso no campo PESO
+        </li>
+        <li>pesar o total de componetes e digitar o peso no campo PESO TOTAL
+        </li>
+        <li>
+            Aperte o botão CALCULAR e o total de componentes aparecerá no campo TOTAL COMPONENTE.
+        </li>
+        <li>Caso 5 componentes não forem suficientes para a balança computar o peso ou queira colocar uma quantidade diferente de componentes para tirar a tara, digite a quantidade do componente pesado no campo QUANTIDADE ALTERNATIVA</li>
+        <li>No caso de componentes pesados (que estourem o limite de peso da balança) ou mais de uma pesagem do mesmo componente, selecionar o campo SOBREPESO, e
+            fracionar a pesagem, colocando o resultado de cada pesagem em seus respectivos campos</li>
+    </ul>
+</main>
+
+    <script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>

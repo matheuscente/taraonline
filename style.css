@@ -1,0 +1,208 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(235, 235, 235);
+    height: 100vh;
+}
+
+li {
+    list-style: none;
+}
+
+.logo {
+    font-weight: 400;
+    text-align: center;
+    font-size: 2rem;
+}
+main {
+    padding: 1.875rem;
+    background-color: white;
+    margin-top: 10%;
+    border-radius: 5px;
+    max-width: 31.25rem;
+    margin: auto;
+}
+
+.conteiner {
+    padding-right: 1.25rem;
+    max-width: 21.875rem;
+    margin: 0 auto;
+}
+
+
+.input-class {
+    display: flex;
+    justify-content: end;
+    align-content: center;
+    margin-bottom: 0.625rem;
+} 
+.button {
+    display: block;
+    margin: 1.125rem auto;
+    padding: 0.313rem 1.25rem;
+    cursor: pointer;
+}
+
+.button:hover {
+    transition: 0.2s;
+    transform: scale(1.1);
+
+}
+
+.result span {
+    margin-top: 1.875rem;
+    display: block;
+    text-align: center;
+    border-radius: 5px;
+} 
+
+#resultado {
+    display: block;
+    font-weight: bold;
+    background-color: rgb(235, 235, 235);
+    margin: 0.625rem auto;
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+
+}
+
+.radio {
+    justify-items: center;
+    max-width: 20rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 1.25rem;
+    margin-top: 1.25rem;
+}
+
+.radio span {
+    grid-row: 2;
+}
+
+.radio .radio-item input{
+    margin-top: 0.313rem;
+    max-width: 5.5rem;
+}
+
+.radio .radio-item label {
+    margin-top: 0.313rem;
+}
+.radio .radio-item:nth-child(5) {
+    display: none;
+}
+
+
+.radio-item{
+    min-width: 10rem;
+    margin-bottom: 0.313rem;
+    grid-column: 2;
+    display: flex;
+    gap: 5px;
+    align-content: center;
+}
+
+.radio-item label {
+    cursor: pointer;
+    text-transform: lowercase;
+}
+
+input {
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background: rgb(236, 235, 235);
+}
+
+.input-class input {
+    margin-left: 0.625rem;
+}
+
+#peso-recip-id {
+    margin-left: 0px;
+}
+
+li {
+    margin-left: 1.875rem;
+    margin-bottom: 1.25rem;
+    position: relative;
+    line-height: 1.5rem;
+}
+
+li::before {
+    position: absolute;
+    width: 1.75rem;
+    height: 1.75rem;
+    content: '';
+    left: -30px;
+    background-image: url(arrowLEFT.svg);
+}
+
+h2 {
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    margin-top: 3.125rem;
+    position: relative;
+}
+
+h2:hover {
+    cursor: pointer;
+}
+
+h2::after {
+    content: '';
+    background-image: url(arrowDOWN.svg);
+    width: 2.375rem;
+    height: 2.375rem;
+    position: absolute;
+    top: -3px;
+}
+
+ul {
+    display: none;
+}
+
+.ativado {
+    display: block;
+}
+
+h2.ativo::after {
+    content: '';
+    background-image: url(arrowTOP.svg);
+    width: 1.875rem;
+    height: 1.875rem;
+    position: absolute;
+    top: -3px;
+
+}
+
+@media(min-width: 1000px) {
+    html {
+        font-size: 120%;
+    }
+    body {
+        display: grid;
+    }
+
+    main {
+        padding: 100px;
+        max-width: 800px;
+    }
+
+    h2.ativo::after {
+        top: 0px;
+    }
+
+    h2::after {
+        top: 0px;
+    }
+
+
+
+}
+
